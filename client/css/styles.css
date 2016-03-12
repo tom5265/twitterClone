@@ -1,7 +1,19 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
 ::-webkit-input-placeholder {
     color: black;
 } 
 
 input {
     padding: 10px;
+}
+
+#form-container {
+    text-align: center;
+}
+
+#tweet-container {
+    text-align: center;
 }
