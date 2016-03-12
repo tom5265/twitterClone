@@ -4,15 +4,15 @@ $(document).ready(function(){
 		/*This function should create a post request using jquery. When posted it should:
 			1) Add tweets to the 'database'
 			2) After posted prepend message to list of messages and clear input box */
-            // $.ajax({
-            //     method: 'POST',
-            //     url: 'messages.txt',
-            //     success: function() {
-            //         var text = $(input).val();
-            //         $('#tweet_list').prepend(<li>text</li>)
-            //     }
+            $.ajax({
+                method: 'POST',
+                url: 'messages.txt',
+                success: function() {
+                    var text = $(input).val();
+                    $('#tweet_list').prepend(<li>text</li>)
+                }
                 
-            // })
+            })
             
 	}
 
