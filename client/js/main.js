@@ -7,12 +7,11 @@ $(document).ready(function(){
             $.ajax({
                 method: 'POST',
                 url: 'messages.txt',
-                success: function() {
-                    var text = $(input).val();
-                    $('#tweet_list').prepend(<li>text</li>)
-                }
-                
-            })
+                data:      
+            }).then(function() {
+                    var text = $('#inp').val();
+                    $('#tweet_list').prepend('<li>text</li>')
+                })
             
 	}
 
@@ -23,7 +22,7 @@ $(document).ready(function(){
                 url: 'messages.txt',
                 success: function(tweets) {
                     $.each(tweets, function (i, tweet) {
-                        $('#tweet_list').prepend(<li>tweet</li>)
+                        $('#tweet_list').prepend('<li>tweet</li>')
                     })
                 }
             })
@@ -31,4 +30,7 @@ $(document).ready(function(){
 
 	/*Calls function once page loaded to display tweets to page*/
 	getData();
+    $('#btn').click(function () {
+        postData();
+    })
 });
