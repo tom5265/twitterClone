@@ -1,3 +1,5 @@
+var allTweets = [];
+
 $(document).ready(function() {
     $('#btn').click(function() {
         var text = $('#inp').val();
@@ -34,7 +36,7 @@ $(document).ready(function() {
         $.ajax({
             method: 'GET',
             url: 'messages',
-        }).done(function(data) {
+        }).then(function(data) {
             var tweets = data.split('\n');
             console.log(tweets);
             for (var i = 0; i < tweets.length; i++) {
@@ -43,6 +45,9 @@ $(document).ready(function() {
                 var screenName = tweet.userName;
                 $('#tweet_list').prepend('<li>' + screenName + ': ' + twit + '</li>');
             }
+        }).done(function () {
+            allTweets.push(tweet);
+            console.log(allTweets);
         })
     }
     /*Calls function once page loaded to display tweets to page*/
