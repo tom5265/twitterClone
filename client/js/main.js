@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     $('#btn').click(function() {
         var text = $('#inp').val();
         var anonymous = 'anonymous';
