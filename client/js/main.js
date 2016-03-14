@@ -37,6 +37,7 @@ $(document).ready(function() {
             url: 'messages',
         }).done(function(data) {
             var tweets = data.split('\n');
+            console.log(tweets);
             for (var i = 0; i < tweets.length; i++) {
                 var tweet = JSON.parse(tweets[i]);
                 var twit = tweet.text;
