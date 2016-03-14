@@ -17,3 +17,7 @@ input {
 #tweet-container {
     text-align: center;
 }
+
+#tweet_list {
+    list-style: none;
+}
