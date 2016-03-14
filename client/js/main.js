@@ -3,8 +3,12 @@ $(document).ready(function() {
     $('#btn').click(function() {
         var text = $('#inp').val();
         var anonymous = 'anonymous';
+        if (text == null || text == '') {
+            alert('You must fill in the tweeter!');
+        }
+        else {
         postData(text, anonymous);
-
+        }
     })
 
     /*Using document ready runs code only after the DOM is ready for js code to run more on that here: https://learn.jquery.com/using-jquery-core/document-ready */
